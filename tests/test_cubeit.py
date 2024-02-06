@@ -18,6 +18,7 @@ def test_check_empty(page:Page):
 
 
 
+
 def test_check(page:Page):
 
     page.goto(BASE_URL)
