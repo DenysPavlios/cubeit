@@ -17,9 +17,6 @@ def test_check_empty(page:Page):
     expect(results).to_contain_text('Enter something!')
 
 
-
-
-
 def test_check(page:Page):
 
     page.goto(BASE_URL)
