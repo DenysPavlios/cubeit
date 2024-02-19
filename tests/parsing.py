@@ -23,8 +23,6 @@ class GITSpider(scrapy.Spider):
             telegramm = response.follow(next_page, callback=self.parse)
             yield response.follow(next_page, callback=self.parse)
 
-    def get_results(self):
-        return self.results
 
 #
 # import json
