@@ -20,7 +20,7 @@ class GITSpider(scrapy.Spider):
 
         next_page = response.css('a.page-link::attr(href)').get()
         if next_page:
-            print(response.follow(next_page, callback=self.parse))
+            telegramm = response.follow(next_page, callback=self.parse)
             yield response.follow(next_page, callback=self.parse)
 
 
