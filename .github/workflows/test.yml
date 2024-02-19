@@ -34,7 +34,7 @@ jobs:
           scrapy runspider tests/parsing.py
 
       - name: Send Telegram message
-        run: python telegram.py
+        run: python tests/telegram.py
         env:
          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
          CHAT_ID: ${{ secrets.CHAT_ID }}
