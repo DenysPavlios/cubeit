@@ -1,6 +1,5 @@
 
-
-
+import os
 import requests
 
 def send_message(token, chat_id, message):
@@ -12,8 +11,31 @@ def send_message(token, chat_id, message):
     response = requests.post(url, data=payload)
     return response.json()
 
-token = "6990056464:AAHTNehh0TSIU7TrDx-3ubikJJ_ucoDDQnQ"
-chat_id = "679677453"
+# Используйте значения секретов из переменных окружения
+token = os.environ.get('BOT_TOKEN')
+chat_id = os.environ.get('CHAT_ID')
 message = "Результаты тестов: SUCCESS/FAILURE"
 
 send_message(token, chat_id, message)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
