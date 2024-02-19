@@ -1,6 +1,3 @@
-from urllib import response
-
-from tests.parsing import GITSpider
 
 import os
 import requests
@@ -14,32 +11,11 @@ def send_message(token, chat_id, message):
     response = requests.post(url, data=payload)
     return response.json()
 
+# Используйте значения секретов из переменных окружения
 token = os.environ.get('BOT_TOKEN')
 chat_id = os.environ.get('CHAT_ID')
-
-message = "Результаты тестов: "
-
+message = "Результаты тестов: SUCCESS/FAILURE"
 
 send_message(token, chat_id, message)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
